@@ -1,10 +1,10 @@
 workflows:
   ios-habit-tracker:
-    name: Habit Tracker iOS
+    name: Moniqra iOS
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: Habit1
+      app_store_connect: Moniqra
     publishing:
       app_store_connect:
         auth: integration
@@ -14,11 +14,11 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store # or: Habit
-        bundle_identifier: com.trackerhabit.app
+        bundle_identifier: com.vh.moniqra.app
       vars:
-        BUNDLE_ID: "com.trackerhabit.app"
-        XCODE_PROJECT: "Habit Tracker.xcodeproj"
-        XCODE_SCHEME: "Habit Tracker"
+        BUNDLE_ID: "com.vh.moniqra.app"
+        XCODE_PROJECT: "Moniqra.xcodeproj"
+        XCODE_SCHEME: "Moniqra"
       xcode: 16.4
     scripts:
       - name: Set up provisioning profiles settings on Xcode project
